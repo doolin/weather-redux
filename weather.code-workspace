@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "src/actions"
+		},
+		{
+			"path": "src/components"
+		},
+		{
+			"path": "src/containers"
+		},
+		{
+			"path": "src/reducers"
+		}
+	]
+}
