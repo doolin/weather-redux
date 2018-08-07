@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { fetchWeather } from '../actions/index';
+import { fetchWeather } from '../actions';
 
 class SearchBar extends Component {
     constructor(props) {
@@ -15,11 +15,12 @@ class SearchBar extends Component {
     }
 
     onInputChange(event) {
-        console.log(event.target.value);
+        console.log('onInputChange', event.target.value);
         this.setState({ term: event.target.value });
     }
 
     onFormSubmit(event) {
+       console.log('onFormSubmit',event.target.value);
        event.preventDefault();
        this.props.fetchWeather(this.state.term);
        this.setState({ term: '' });
